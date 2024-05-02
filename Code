@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+	<img src=
+		"https://github.com/gkmatthews/SGM-Interactive-Map/blob/main/SGM%20First%20Floor%20(blank).png"
+		alt=""
+		width=""
+		height=""
+		class="aligncenter"
+		usemap="#firstfloor" />
+
+	<map name="firstfloor">
+		
+		<area shape="rect"
+			coords="224,30,276,82"
+			href= "https://github.com/gkmatthews/SGM-Interactive-Map/blob/main/SGM%20First%20Floor%20(167).png"
+			alt="Square">
+	</map>
+
+
+</body>
+
+</html>
