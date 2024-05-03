@@ -1,25 +1,22 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SGM Interactive SVG Map</title>
+<style>
+    #map {
+        width: 100%;
+        height: auto;
+    }
+</style>
+</head>
 <body>
 
-	<img src=
-		"https://github.com/gkmatthews/SGM-Interactive-Map-Public-/blob/main/SGM%20First%20Floor%20(blank).png?raw=true"
-		alt=""
-		width=""
-		height=""
-		class="aligncenter"
-		usemap="#firstfloor" />
-
-	<map name="firstfloor">
-		
-		<area shape="rect"
-			coords="224,30,276,82"
-			href= "https://github.com/gkmatthews/SGM-Interactive-Map-Public-/blob/main/SGM%20First%20Floor%20(167).png?raw=true"
-			alt="Square">
-	</map>
-
+<svg id="map" viewBox="0 0 800 600">
+	<img src = "https://raw.githubusercontent.com/gkmatthews/SGM-Interactive-Map-Public-/226d7d63e233f1c07c7c7d22037cd358548735e2/SGM%20First%20Floor%20(blank)(lines%20only).svg"
+	/>
+</svg>
 
 </body>
-
 </html>
