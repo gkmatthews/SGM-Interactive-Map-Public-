@@ -3,20 +3,61 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SGM Interactive SVG Map</title>
+<title>Interactive SVG Map</title>
 <style>
     #map {
         width: 100%;
         height: auto;
     }
+    .state {
+        cursor: pointer;
+    }
+    .state:hover {
+        opacity: 0.7;
+    }
+    
+    #scaled-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+    
+
 </style>
 </head>
 <body>
 
-<svg id="map" viewBox="0 0 800 600">
-	<img src = "https://raw.githubusercontent.com/gkmatthews/SGM-Interactive-Map-Public-/226d7d63e233f1c07c7c7d22037cd358548735e2/SGM%20First%20Floor%20(blank)(lines%20only).svg"
-	/>
+<svg id="map" viewBox="0 0 800 800">
+    <!-- Example images for states -->
+    <image xlink:href="https://raw.githubusercontent.com/gkmatthews/SGM-Interactive-Map-Public-/2cf813f65ee0b879cadfece61adf954b9d55c7da/SGM%20First%20Floor%20(blank)(lines%20only).svg" 
+    id="scaled-image" data-url="https://raw.githubusercontent.com/gkmatthews/SGM-Interactive-Map-Public-/2cf813f65ee0b879cadfece61adf954b9d55c7da/SGM%20First%20Floor%20(167)(lines%20only).svg">
+    </image>
+    <rect x="254" y="260" width="64" height="84" fill="lightblue" class="state"
+    data-url="https://raw.githubusercontent.com/gkmatthews/SGM-Interactive-Map-Public-/2cf813f65ee0b879cadfece61adf954b9d55c7da/SGM%20First%20Floor%20(167)(lines%20only).svg"
+    />
+    <!-- Add more images for other states -->
 </svg>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Add event listeners for hover effect on states
+    var states = document.querySelectorAll('.state');
+    states.forEach(function(state) {
+        state.addEventListener('mouseenter', function() {
+            this.style.opacity = 0.7;
+        });
+        state.addEventListener('mouseleave', function() {
+            this.style.opacity = 1;
+        });
+        // Add click event listener for each state
+        state.addEventListener('click', function() {
+            // Open a new window with the URL stored in the data-url attribute
+            var url = this.getAttribute('data-url');
+            window.open(url, '_blank');
+        });
+    });
+});
+</script>
 
 </body>
 </html>
