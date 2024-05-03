@@ -9,11 +9,14 @@
         width: 100%;
         height: auto;
     }
+    
     .state {
         cursor: pointer;
+        fill: lightblue;
     }
+    
     .state:hover {
-        opacity: 0.7;
+        opacity: 0.65;
     }
     
     #scaled-image {
@@ -28,14 +31,31 @@
 <body>
 
 <svg id="map" viewBox="0 0 800 800">
-    <!-- Example images for states -->
+    <!-- Main Image -->
     <image xlink:href="https://raw.githubusercontent.com/gkmatthews/SGM-Interactive-Map-Public-/2cf813f65ee0b879cadfece61adf954b9d55c7da/SGM%20First%20Floor%20(blank)(lines%20only).svg" 
     id="scaled-image" data-url="https://raw.githubusercontent.com/gkmatthews/SGM-Interactive-Map-Public-/2cf813f65ee0b879cadfece61adf954b9d55c7da/SGM%20First%20Floor%20(167)(lines%20only).svg">
     </image>
-    <rect x="254" y="260" width="64" height="84" fill="lightblue" class="state"
-    data-url="https://raw.githubusercontent.com/gkmatthews/SGM-Interactive-Map-Public-/2cf813f65ee0b879cadfece61adf954b9d55c7da/SGM%20First%20Floor%20(167)(lines%20only).svg"
+    
+    <!-- Room 109 -->
+    <polygon points="50,5 100,5 120,30 158,80" class="state"
+    data-url=""
     />
-    <!-- Add more images for other states -->
+    
+    <!-- Room 143 -->
+    <rect x="459" y="484" width="37" height="83" class="state"
+    data-url=""
+    />
+    
+    <!-- Room 167 -->
+    <rect x="254" y="260" width="64" height="84" class="state"
+    data-url="https://raw.githubusercontent.com/gkmatthews/SGM-Interactive-Map-Public-/e662ea76c1b68182fcd61f2c47c6b66de74ac9d3/SGM%20First%20Floor%20(167)(lines%20only).svg"
+    />
+    
+    <!-- Chemical Storage -->
+    <rect x="218" y="514" width="51" height="20" class="state"
+    data-url=""
+    />
+
 </svg>
 
 <script>
